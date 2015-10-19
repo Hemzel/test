@@ -1,0 +1,145 @@
+package picoyplaca;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        placa nroPlaca = new placa();
+     //   diaSemana dia = new diaSemana();
+        
+//    //    Date datex = new Date();
+//
+  nroPlaca.setNumeroPlaca("ABC02O7");
+  nroPlaca.setdiaSemana("Martes");
+  //dia.setdiaSemana("Martes");
+  //nroPlaca.setCondiciones("ABC012", "Lunes");
+  
+  //      datex.setDate("15, 03, 1990");
+        System.out.println(nroPlaca.getNumeroPlaca());
+    }
+
+}
+ //// clase placa
+ 
+ 
+ package picoyplaca;
+
+public class placa {
+
+    String placax;
+    String placa;
+    String dia;
+    char ultimoDigito;
+    String strulmiDigito;
+
+    public placa() {
+    }
+
+    public void setNumeroPlaca(String licensePlateNumber) {
+
+        this.placax = licensePlateNumber;
+            ultimoDigito = placax.charAt(placax.length() - 1);
+            String strulmiDigito = Character.toString(ultimoDigito);
+   //   System.out.println(strulmiDigito);
+
+    }
+    
+    public String getNumeroPlaca(){
+    return strulmiDigito;
+    }
+
+    public void setdiaSemana(String DiaSemanax) {
+
+        dia = DiaSemanax;
+
+        switch (dia.toUpperCase()) {
+            case "LUNES":
+                System.out.println("No tienes permitido circular el dia Lunes");
+                break;
+            case "MARTES":
+                System.out.println("No tienes permitido circular el dia Martes");
+                break;
+            case "MIERCOLES":
+                System.out.println("No tienes permitido circular el dia Miercoles");
+                break;
+            case "JUEVES":
+                System.out.println("No tienes permitido circular el dia Jueves");
+                break;
+            case "VIERNES":
+                System.out.println("No tienes permitido circular el dia Viernes");
+                break;
+            case "SABADO":
+                System.out.println("Puede circular este día Sabado");
+                break;
+            case "DOMINGO":
+                System.out.println("Puede circular este día Domingo");
+                break;
+        }
+        
+    }
+    
+    public String getdiaSemana() {
+        return dia;
+        }
+
+    public void setCondiciones() {
+
+        
+        
+        if (strulmiDigito.equals("1") & dia.equals("Lunes")) {
+            System.out.println("no puedes circular hoy");
+        } else {
+            if (strulmiDigito.equals("2") & dia.equals("Lunes")) {
+                System.out.println("No puedes circular hoy");
+            }
+        }
+
+        if (strulmiDigito.equals("3") & dia.equals("Martes")) {
+            System.out.println("no puedes circular hoy");
+        } else {
+            if (strulmiDigito.equals("4") & dia.equals("Martes")) {
+                System.out.println("No puedes circular hoy");
+            }
+        }
+
+        if (strulmiDigito.equals("5") & dia.equals("Miercoles")) {
+            System.out.println("no puedes circular hoy");
+        } else {
+            if (strulmiDigito.equals("6") & dia.equals("Miercoles")) {
+                System.out.println("No puedes circular hoy");
+            }
+        }
+
+        if (strulmiDigito.equals("7") & dia.equals("Jueves")) {
+            System.out.println("no puedes circular hoy");
+        } else {
+            if (strulmiDigito.equals("8") & dia.equals("Jueves")) {
+                System.out.println("No puedes circular hoy");
+            }
+        }
+
+        if (strulmiDigito.equals("9") & dia.equals("Viernes")) {
+            System.out.println("no puedes circular hoy");
+        } else {
+            if (strulmiDigito.equals("0") & dia.equals("Viernes")) {
+                System.out.println("No puedes circular hoy");
+            }
+        }
+        if (strulmiDigito.equals(strulmiDigito) & dia.equals("Sabado")) {
+            System.out.println("puedes circular hoy");
+        } else {
+            if (strulmiDigito.equals(strulmiDigito) & dia.equals("Domingo")) {
+                System.out.println("puedes circular hoy");
+            }
+        }
+                
+    }
+    public String getCondiciones(){
+    return strulmiDigito;
+    }
+    
+    public String getResultado(){
+    return getCondiciones();
+    }
+    
+   }
